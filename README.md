@@ -1,5 +1,5 @@
-# aquactl
-Aquactl commands
+## aquactl commands
+More info at [https://docs.aquasec.com/](https://docs.aquasec.com/)
 
 **aquactl -h**
 *Gets help*
