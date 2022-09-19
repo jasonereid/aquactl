@@ -1,6 +1,8 @@
 ## aquactl commands
 More info at [https://docs.aquasec.com/](https://docs.aquasec.com/)
 
+Note - **assurance** scans applications and infrastructure for potential security issues. **Enforcement** prevents (at runtime) workloads and infrastructure from performing potentially insecure operations.
+
 **aquactl -h** - *Gets help*
 
 **aquactl login** - *Logs in to run other commands*
