@@ -14,6 +14,13 @@ Note - **assurance** scans applications and infrastructure for potential securit
 
 **aquactl download all** - *Downloads the manifests (YAML files) that are used to deploy Aqua Server, Database, Gateway, Enforcer, and KubeEnforcer*
 
+**aquactl image-assurance** - *This command allows you to edit image asssurance policies*
+
+        aquactl image-assurance --get-image-assurance-policies
+        aquactl image-assurance --create --policy-path <NewPolicyName.json>
+        aquactl image-assurance --update --policy-path <updatedPolicyContents.json> \
+        --image-assurance-id <PolicyName>
+
 ### Flags used in aquactl
 * -p, -platform  - *REQUIRED - platform that aqua is deployed on - i.e. kubernetes, aks, eks, gke, openshift, rancher, etc*
 * -v, -version - *REQUIRED - major version of aqua to deploy*
