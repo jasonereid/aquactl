@@ -23,6 +23,10 @@ Note - **assurance** scans applications and infrastructure for potential securit
         aquactl image-assurance --update --policy-path <updatedPolicyContents.json> \
         --image-assurance-id <PolicyName>
 
+**aquactl function-assurance** - *similar to image-assurance*
+
+**aquactl runtime-policy** - *policy for container runtimes*
+
 ### Flags used in aquactl
 * -p, -platform  - *REQUIRED - platform that aqua is deployed on - i.e. kubernetes, aks, eks, gke, openshift, rancher, etc*
 * -v, -version - *REQUIRED - major version of aqua to deploy*
