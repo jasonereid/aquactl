@@ -12,6 +12,8 @@ Note - **assurance** scans applications and infrastructure for potential securit
         aquactl login --serverUrl http://<AQUA_SERVER>:8080 \
               --user <AQUA_USER> --password <AQUA_PASS>
 
+**aquactl stats --get-csp-stats** - *Gets enterprise stats*
+
 **aquactl download all** - *Downloads the manifests (YAML files) that are used to deploy Aqua Server, Database, Gateway, Enforcer, and KubeEnforcer*
 
 **aquactl image-assurance** - *This command allows you to edit image asssurance policies*
@@ -26,6 +28,11 @@ Note - **assurance** scans applications and infrastructure for potential securit
 **aquactl function-assurance** - *similar to image-assurance*
 
 **aquactl runtime-policy** - *policy for container runtimes*
+
+**aquactl nanoenforcer** - *adds nanoenforcer as a layer of AWS Lambda or Azure Functions*
+[Specific instructions are here](https://docs.aquasec.com/v6.5/platform/aquactl/aquactl-add-nanoenforcer/)
+
+
 
 ### Flags used in aquactl
 * -p, -platform  - *REQUIRED - platform that aqua is deployed on - i.e. kubernetes, aks, eks, gke, openshift, rancher, etc*
