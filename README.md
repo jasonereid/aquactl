@@ -15,5 +15,7 @@ More info at [https://docs.aquasec.com/](https://docs.aquasec.com/)
 * --service-account - *K8s service account name, defaults to aqua-sa*
 * -n, --namespace  - *Kubernetes namespace; defaults to aqua*
 * --output-dir - *Directory location for outputting YAML manifest files; defaults to directory aquactl was launched from*
+
 Example usage: 
+    
     aquactl download all --platform gke --version 6.5
