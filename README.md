@@ -17,7 +17,9 @@ Note - **assurance** scans applications and infrastructure for potential securit
 **aquactl image-assurance** - *This command allows you to edit image asssurance policies*
 
         aquactl image-assurance --get-image-assurance-policies
+        
         aquactl image-assurance --create --policy-path <NewPolicyName.json>
+        
         aquactl image-assurance --update --policy-path <updatedPolicyContents.json> \
         --image-assurance-id <PolicyName>
 
