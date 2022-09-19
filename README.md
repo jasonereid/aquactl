@@ -19,3 +19,7 @@ More info at [https://docs.aquasec.com/](https://docs.aquasec.com/)
 Example usage: 
     
     aquactl download all --platform gke --version 6.5
+    
+    aquactl download enforcer --platform aks --version 6.5
+    
+s
