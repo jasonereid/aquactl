@@ -9,6 +9,9 @@ Note - **assurance** scans applications and infrastructure for potential securit
 
 **aquactl login** - *Logs in to run other commands*
 
+        aquactl login --serverUrl http://<AQUA_SERVER>:8080 \
+              --user <AQUA_USER> --password <AQUA_PASS>
+
 **aquactl download all** - *Downloads the manifests (YAML files) that are used to deploy Aqua Server, Database, Gateway, Enforcer, and KubeEnforcer*
 
 ### Flags used in aquactl
