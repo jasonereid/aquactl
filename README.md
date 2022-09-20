@@ -49,4 +49,36 @@ Example usage:
     
     aquactl download enforcer --platform aks --version 6.5
     
-s
+# Steps to deploy Enforcers via aquactl
+
+1. create namespace
+
+        kubectl create namespace aqua
+        
+2. create docker registry secret
+
+        kubectl create secret docker-registry aqua-registry \
+                --docker-server=registry.aquasec.com \
+                --docker-username=<YOUR_NAME> --docker-password=<YOUR_PASSWORD> \
+                --docker-email=<YOUR_EMAIL> -n aqua
+                
+3. create plateform specific RBAC
+
+        kubectl apply -f https://raw.githubusercontent.com/aquasecurity/deployments/2022.4/enforcers/aqua_enforcer/kubernetes_and_openshift/manifests/001_aqua_enforcer_rbac/< PLATFORM >/aqua_sa.yaml
+        
+4. create secrets for deployment
+
+        kubectl create secret generic enforcer-token --from-literal=token=<TOKEN_FROM_SERVER_UI> -n aqua
+
+5. define the ConfigMap for the deployment
+
+        kubectl apply -f https://raw.githubusercontent.com/aquasecurity/deployments/2022.4/enforcers/aqua_enforcer/kubernetes_and_openshift/manifests/002_aqua_enforcer_configMap.yaml
+
+6. deploy the Aqua Enforcer DaemonSet
+
+        kubectl apply -f https://raw.githubusercontent.com/aquasecurity/deployments/2022.4/enforcers/aqua_enforcer/kubernetes_and_openshift/manifests/004_aqua_enforcer_daemonset.yaml
+
+7. Verify deployment
+
+Check the aqua interface under Administration > Enforcers
+
